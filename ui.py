@@ -1,1 +1,1 @@
-#ui will be added once views are done.
+#ui will be added once all views are completed.
