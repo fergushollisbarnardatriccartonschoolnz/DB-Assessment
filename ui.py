@@ -73,5 +73,7 @@ while menu_choice != 'Z':
     elif menu_choice == 'M':
         print_query('type_parts')
     elif menu_choice == 'ADVANCED':
+        print("")
+        print("---------------------------------")
         import parameter_ui
         parameter_ui
