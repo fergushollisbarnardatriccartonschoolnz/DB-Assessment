@@ -1,4 +1,3 @@
-'''use parameter_ui to make your own query!'''
 #this is NOT my code.
 
 # Import the libraries to connect to the database and present the information in tables
@@ -28,6 +27,7 @@ def print_query(view_name:str):
 #you may want to zoom out using ctrl +/- to see the full database.
 menu_choice = ''
 while menu_choice != 'Z':
+    print("")
     menu_choice = input('This is a database of parts\n\n'
                         'Type the letter for the information you want:\n'
                         'A: all data\n'
@@ -43,6 +43,7 @@ while menu_choice != 'Z':
                         'K: parts that can deal damage to organisms\n'
                         'L: parts that have a higher buoyancy than weight, and therefore float on water\n'
                         'M: parts with damage type inflictions and/or resistances\n'
+                        'ADVANCED: make your own query\n'
                         'Z: Exit\n\nType option here: ')
     menu_choice = menu_choice.upper()
     if menu_choice == 'A':
@@ -71,3 +72,6 @@ while menu_choice != 'Z':
         print_query('buoyant_parts')
     elif menu_choice == 'M':
         print_query('type_parts')
+    elif menu_choice == 'ADVANCED':
+        import parameter_ui
+        parameter_ui
