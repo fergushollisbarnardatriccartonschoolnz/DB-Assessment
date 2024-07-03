@@ -22,15 +22,20 @@ def print_parameter_query(fields:str, where:str):
     print(tabulate(results,fields.split(",")))
     db.close()
 
-
-
-print("List of columns: Part_id, Usable_by_id, Eats_id, Name, Connections, Energy, Appetite, Health, Health_Regeneration, Defense, Part_Defense, Damage_Taken_Modifiers, Speed, Weight, Buoyancy, Light_Transparency, Power, Damage, Damage_Cooldown, Can_Damage, Inflicted_Damage_Types, Passive_Energy, Cost")
-chosen_columns = input("Which column(s) would you like? - * for all - remember to put a , and a space inbetween them - also use capitals as shown in the list above!: ")
+print("")
+print("List of columns: [Part_id, Usable_by_id, Eats_id, Name, Connections, Energy, Appetite, Health, Health_Regeneration, Defense, Part_Defense, Damage_Taken_Modifiers, Speed, Weight, Buoyancy, Light_Transparency, Power, Damage, Damage_Cooldown, Can_Damage, Inflicted_Damage_Types, Passive_Energy, Cost]")
+print("")
+print("only write what is in brackets -> (). notes are written in -> [].")
+print("")
+chosen_columns = input("Which columns would you like? [* for all columns] [remember to put a , and a space inbetween them - also use capitals as shown in the list above!]: ")
 while not chosen_columns:
-    chosen_columns = input("Which column(s) would you like? - * for all - remember to put a , and a space inbetween them - also use capitals as shown in the list above!: ")
-chosen_where = input("Only show parts where (column = value) - leave blank for no restrictions: ")
-chosen_order = input("Order by (column ASC/DESC) - leave blank for part_id ASC order: ")
-
+    print("")
+    chosen_columns = input("Which columns would you like? [* for all columns] [remember to put a , and a space inbetween them - also use capitals as shown in the list above!]: ")
+print("")
+chosen_where = input("Only show parts where (column (= [or] > [or] <) number) [leave blank for no restrictions]: ")
+print("")
+chosen_order = input("Order by (column (ASC [or] DESC)) [leave blank for part_id ASC order [ASC is ascending] [DESC is descending]]: ")
+print("")
 
 if chosen_where:
     if chosen_order:

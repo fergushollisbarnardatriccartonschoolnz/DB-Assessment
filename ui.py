@@ -1,3 +1,4 @@
+'''use parameter_ui to make your own query!'''
 #this is NOT my code.
 
 # Import the libraries to connect to the database and present the information in tables
