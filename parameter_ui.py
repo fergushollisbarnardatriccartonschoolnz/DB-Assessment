@@ -23,18 +23,18 @@ def print_parameter_query(fields:str, where:str):
     db.close()
 
 print("")
-print("List of columns: [Part_id, Usable_by_id, Eats_id, Name, Connections, Energy, Appetite, Health, Health_Regeneration, Defense, Part_Defense, Damage_Taken_Modifiers, Speed, Weight, Buoyancy, Light_Transparency, Power, Damage, Damage_Cooldown, Can_Damage, Inflicted_Damage_Types, Passive_Energy, Cost]")
+print("list of columns: [Part_id, Usable_by_id, Eats_id, Name, Connections, Energy, Appetite, Health, Health_Regeneration, Defense, Part_Defense, Damage_Taken_Modifiers, Speed, Weight, Buoyancy, Light_Transparency, Power, Damage, Damage_Cooldown, Can_Damage, Inflicted_Damage_Types, Passive_Energy, Cost]")
 print("")
 print("only write what is in brackets -> (). notes are written in -> [].")
 print("")
-chosen_columns = input("Which columns would you like? [* for all columns] [remember to put a , and a space inbetween them - also use capitals as shown in the list above!]: ")
+chosen_columns = input("which columns would you like? [* for all columns] [remember to put a , and a space inbetween them - also use capitals as shown in the list above!] [recommended to put Name or Part_id in at some point]: ")
 while not chosen_columns:
     print("")
-    chosen_columns = input("Which columns would you like? [* for all columns] [remember to put a , and a space inbetween them - also use capitals as shown in the list above!]: ")
+    chosen_columns = input("which columns would you like? [* for all columns] [remember to put a , and a space inbetween them - also use capitals as shown in the list above!] [recommended to put Name or Part_id in at some point]: ")
 print("")
-chosen_where = input("Only show parts where (column (= [or] > [or] <) number) [leave blank for no restrictions]: ")
+chosen_where = input("only show parts where (column (= [or] > [or] <) number) [leave blank for no restrictions]: ")
 print("")
-chosen_order = input("Order by (column (ASC [or] DESC)) [leave blank for part_id ASC order [ASC is ascending] [DESC is descending]]: ")
+chosen_order = input("order by (column (ASC [or] DESC)) [leave blank for Part_id ASC order [ASC is ascending] [DESC is descending]]: ")
 print("")
 
 if chosen_where:
